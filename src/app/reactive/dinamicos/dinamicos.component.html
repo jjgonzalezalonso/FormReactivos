@@ -1,0 +1,49 @@
+<h2>Reactivos: <small> Dinámicos </small></h2>
+<hr>
+
+<form  autocomplete="off">   
+    <!-- Nombre -->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Nombre</label>
+        <div class="col-sm-9">
+            <input class="form-control"  placeholder="Nombre de la persona" name="nombre" required>
+                   <span class="form-text text-danger">
+                        El nombre es obligatorio
+                    </span>
+        </div>
+    </div>
+    <!-- Agregar Favorito-->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Agregar</label>
+        <div class="col-sm-9">
+            <div class="input-group">
+                <input class="form-control" placeholder="Agregar favorito" name="nuevoJuego"  (keyup.enter)="true">
+                <button class="btn btn-outline-primary" type="button">
+                    Agregar</button>
+            </div>       
+        </div>
+    </div>
+    <!-- Lista de Juegos Favoritos -->
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Favoritos</label>
+        <div class="col-sm-9">
+            <!-- <div class="input-group mb-1"  *ngFor="let juego of persona.favoritos; let i = index">
+                <input  name="favorito_{{i}}" [ngModel]="juego.nombre" class="form-control">  
+                <button class="btn btn-outline-danger" type="button" (click)="eliminar(i)">
+                   Eliminar
+               </button>
+            </div> -->
+        </div>
+    </div>    
+<!-- La caja de bananas [(ngModel)], los () son para emitir el valor 
+    y se vean los cambios inmediatamente en <pre>{{ persona | json }}</pre>-->
+                
+     <div class="row">
+        <div class="col-sm-12">
+            <button type="button" class="btn btn-primary float-end" (click)="true">
+                Guardar
+            </button>
+        </div>
+    </div>
+</form>
+
